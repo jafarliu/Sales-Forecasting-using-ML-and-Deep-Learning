@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Boston House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="AUS_1" placeholder="AUS_1" required="required" /><br>
+    	<input type="text" name="AUS_2" placeholder="AUS_2" required="required" /><br>
+        <input type="text" name="CAN_1" placeholder="CAN_1" required="required" /><br>
+        <input type="text" name="CAN_2" placeholder="CAN_2" required="required" /><br>
+        <input type="text" name="CAN_3" placeholder="CAN_3" required="required" /><br>
+        <input type="text" name="GER_1" placeholder="GER_1" required="required" /><br>
+        <input type="text" name="GER_2" placeholder="GER_2" required="required" /><br>
+        <input type="text" name="GER_3" placeholder="GER_3" required="required" /><br>
+        <input type="text" name="FRA_1" placeholder="FRA_1" required="required" /><br>
+        <input type="text" name="FRA_2" placeholder="FRA_2" required="required" /><br>
+        <input type="text" name="FRA_3" placeholder="FRA_3" required="required" /><br>
+        <input type="text" name="IND_1" placeholder="IND_1" required="required" /><br>
+        <input type="text" name="IND_2" placeholder="IND_2" required="required" /><br>
+        <input type="text" name="IND_3" placeholder="IND_3" required="required" /><br>
+        <input type="text" name="JAP_1" placeholder="JAP_1" required="required" /><br>
+        <input type="text" name="JAP_3" placeholder="JAP_3" required="required" /><br>
+        <input type="text" name="USA_1" placeholder="USA_1" required="required" /><br>
+        <input type="text" name="USA_2" placeholder="USA_2" required="required" /><br>
+        <input type="text" name="USA_3" placeholder="USA_3" required="required" /><br>
+        <input type="text" name="UK_1" placeholder="UK_1" required="required" /><br>
+        <input type="text" name="UK_2" placeholder="UK_2" required="required" /><br>
+        <input type="text" name="UK_3" placeholder="UK_3" required="required" /><br>
+        <input type="text" name="24_hours_sales_lag" placeholder="24_hours_sales_lag" required="required" /><br>
+        <input type="text" name="factor2_seasonal_lag" placeholder="factor2_seasonal_lag" required="required" /><br>
+        <input type="text" name="factor3_seasonal_lag" placeholder="factor3_seasonal_lag" required="required" /><br>
+        <input type="text" name="factor4_seasonal_lag" placeholder="factor4_seasonal_lag" required="required" /><br>
+        <input type="text" name="hour" placeholder="hour" required="required" /><br>
+        <input type="text" name="day" placeholder="day" required="required" /><br>
+        <input type="text" name="month" placeholder="month" required="required" /><br>
+        <input type="text" name="factor1" placeholder="factor1" required="required" /><br>
+        <input type="text" name="factor2" placeholder="factor2" required="required" /><br>
+        <input type="text" name="factor3" placeholder="factor3" required="required" /><br>
+        <input type="text" name="factor4" placeholder="factor4" required="required" /><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
